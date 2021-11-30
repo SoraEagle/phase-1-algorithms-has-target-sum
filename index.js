@@ -1,11 +1,11 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // Write your algorithm here:
   for(const num1 of array){ //Primary/Parent loop for 1st # for finding sum.
     for(const num2 of array){ //Nested/Child loop for 2nd # for finding sum.
-      let sum = num1 + num2; //Create reference to sum of 2 #s.
-      if(sum === target) return true; //Compare each sum found to target Integer.
+      //Ensure that the num1 doesn't get added to itself.
+      if((num1 + num2) === target) return true; //Compare each sum found to target Integer.
     }
-    return false;
+    return false; //No possible sums match the target Integer.
   }
 }
 
